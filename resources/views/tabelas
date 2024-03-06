@@ -1,0 +1,16 @@
+id
+pasto(string)
+area(doubke)
+entrada(data)
+animal(raçao diaria)(bouble)
+quant animal(bigint)
+total kg/raçao(bigint) --calculo
+peso kg entrada(bigint)
+quantidades de dias(bigint)
+projeçao(bigint)--calculo
+estoque @(double) --calculo
+Ua/ha(double) -- calculo
+data prev abate(date) --calculo(data entrada + quant dias)
+Abatido()
+delete
+usuario
