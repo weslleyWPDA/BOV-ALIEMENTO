@@ -49,9 +49,9 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="{{ route('home') }}" class="sidebar-link">
+                    <a href="{{ route('lotes.index') }}" class="sidebar-link">
                         <i class="lni lni-home"></i>
-                        <span>Home</span>
+                        <span>Lotes</span>
                     </a>
                 </li>
                 {{-- drop --}}

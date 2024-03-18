@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\FazendaADMCont;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LoteBovAbatesCont;
+use App\Http\Controllers\LoteBovCont;
+use App\Http\Controllers\TratoLoteCont;
 use App\Http\Controllers\UsuariosADMCont;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +17,11 @@ Route::group(['middleware' => 'AdminGroup',], function () {
 });
 Route::group(['middleware' => 'UserGroup',], function () {
     Route::get('/home', [LoginController::class, 'home'])->name('home');
+
+    Route::resource('lotes', LoteBovCont::class);
+    Route::resource('abates', LoteBovAbatesCont::class);
+
+    Route::resource('lotes/trato', TratoLoteCont::class);
 });
 
 Route::get('/', [LoginController::class, 'login'])->name('login');
